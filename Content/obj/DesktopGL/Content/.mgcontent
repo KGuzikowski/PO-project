@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/adventurer-idle-00.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Attack/Minotaur_attack_00.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Attack/Minotaur_attack_01.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Attack/Minotaur_attack_02.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Attack/Minotaur_attack_03.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Attack/Minotaur_attack_04.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Attack/Minotaur_attack_05.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Attack/Minotaur_attack_06.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Attack/Minotaur_attack_07.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Die/Minotaur_die_00.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Die/Minotaur_die_01.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Die/Minotaur_die_02.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Die/Minotaur_die_03.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Die/Minotaur_die_04.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Die/Minotaur_die_05.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Die/Minotaur_die_06.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Die/Minotaur_die_07.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Minotaur.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Run/Minotaur_run_00.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Run/Minotaur_run_01.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Run/Minotaur_run_02.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Run/Minotaur_run_03.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Run/Minotaur_run_04.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Run/Minotaur_run_05.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Run/Minotaur_run_06.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/Enemies/Minotaur/Run/Minotaur_run_07.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroAttack/adventurer-attack1-00.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroAttack/adventurer-attack1-01.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroAttack/adventurer-attack1-02.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroAttack/adventurer-attack1-03.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroAttack/adventurer-attack1-04.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroAttack/adventurer-attack1-05.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroRun/adventurer-run-00.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroRun/adventurer-run-01.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroRun/adventurer-run-02.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroRun/adventurer-run-03.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroRun/adventurer-run-04.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/HeroRun/adventurer-run-05.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/World/deska.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/World/land_6.png</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/Fonts/Arial16.spritefont</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
