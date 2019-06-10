@@ -16,14 +16,14 @@ namespace StudentSurvival
     {
         protected Texture2D BasicModel;
         public Rectangle BoundingBox;
-        protected int TimesBigger;
+        protected float TimesBigger;
 
-        public Basic2d(string path, int X, int Y, int TimesBigger)
+        public Basic2d(string path, int X, int Y, float TimesBigger)
         {
             BasicModel = Globals.content.Load<Texture2D>(path);
             BoundingBox = new Rectangle(X, Y, 
-                                        BasicModel.Width * TimesBigger, 
-                                        BasicModel.Height * TimesBigger
+                                        (int)(BasicModel.Width * TimesBigger), 
+                                        (int)(BasicModel.Height * TimesBigger)
                                         );
             this.TimesBigger = TimesBigger;
         }

@@ -42,7 +42,7 @@ namespace StudentSurvival
         private int DieChange;
         private int DieSpriteNum;
 
-        public Character(string path, int X, int Y, float vel, int run, int attack, int TimesBigger, int health, int strength)
+        public Character(string path, int X, int Y, float vel, int run, int attack, float TimesBigger, int health, int strength)
         : base(path, X, Y, TimesBigger)
         {
             Alive = true;
@@ -67,6 +67,7 @@ namespace StudentSurvival
 
         public new virtual void Update()
         {
+            if (!Alive) return;
             if (Health <= 0)
             {
                 Die();
@@ -137,16 +138,16 @@ namespace StudentSurvival
             }
         }
 
-        protected void Die()
+        protected virtual void Die()
         {
+            Alive = false;
             if (StepsMovedSinceChange % DieChange == 0)
             {
-                if (DieSpriteNum == DieImgs.Count) Alive = false;
-                else
+                if (DieSpriteNum != DieImgs.Count)
                 {
                     TempModel = DieImgs[DieSpriteNum];
-                    BoundingBox.Width = TempModel.Width * TimesBigger;
-                    BoundingBox.Height = TempModel.Height * TimesBigger;
+                    BoundingBox.Width = (int)(TempModel.Width * TimesBigger);
+                    BoundingBox.Height = (int)(TempModel.Height * TimesBigger);
                     DieSpriteNum++;
                     StepsMovedSinceChange = 0;
                 }
@@ -161,8 +162,8 @@ namespace StudentSurvival
                 AttackSpriteNum = 0;
                 AttackInProgress = false;
                 TempModel = BasicModel;
-                BoundingBox.Width = TempModel.Width * TimesBigger;
-                BoundingBox.Height = TempModel.Height * TimesBigger;
+                BoundingBox.Width = (int)(TempModel.Width * TimesBigger);
+                BoundingBox.Height = (int)(TempModel.Height * TimesBigger);
                 HitEnemy();
             }
             else
@@ -170,8 +171,8 @@ namespace StudentSurvival
                 if (AttackStepsSinceChange % AttackChange == 0)
                 {
                     TempModel = AttackImgs[AttackSpriteNum];
-                    BoundingBox.Width = TempModel.Width * TimesBigger;
-                    BoundingBox.Height = TempModel.Height * TimesBigger;
+                    BoundingBox.Width = (int)(TempModel.Width * TimesBigger);
+                    BoundingBox.Height = (int)(TempModel.Height * TimesBigger);
                     AttackSpriteNum++;
                     StepsMovedSinceChange = 0;
                 }
@@ -190,8 +191,8 @@ namespace StudentSurvival
             {
                 if (RunSpriteNum == RunImgs.Count) RunSpriteNum = 0;
                 TempModel = RunImgs[RunSpriteNum];
-                BoundingBox.Width = TempModel.Width * TimesBigger;
-                BoundingBox.Height = TempModel.Height * TimesBigger;
+                BoundingBox.Width = (int)(TempModel.Width * TimesBigger);
+                BoundingBox.Height = (int)(TempModel.Height * TimesBigger);
                 RunSpriteNum++;
                 StepsMovedSinceChange = 0;
             }
@@ -231,6 +232,14 @@ namespace StudentSurvival
             RunSpritesManager();
             BoundingBox.Y = (int)(BoundingBox.Y - velocity);
             foreach (Basic2d asset in Globals.GameAssets)
+            {
+                if (Collides(asset))
+                {
+                    BoundingBox.Y = (int)(BoundingBox.Y + velocity);
+                }
+            }
+
+            foreach (Basic2d asset in Globals.TopBar)
             {
                 if (Collides(asset))
                 {
@@ -285,6 +294,14 @@ namespace StudentSurvival
             TempModel = BasicModel;
             BoundingBox.Y = (int)(BoundingBox.Y - velocity);
             foreach (Basic2d asset in Globals.GameAssets)
+            {
+                if (Collides(asset))
+                {
+                    BoundingBox.Y = (int)(BoundingBox.Y + velocity);
+                }
+            }
+
+            foreach (Basic2d asset in Globals.TopBar)
             {
                 if (Collides(asset))
                 {

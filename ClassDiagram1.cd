@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StudentSurvival.Game1">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAgAAAwAAAAAAAAAAAAAAAAgAAAAAAAAAAAQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.Program">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.Basic2d">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="BasicModel" Hidden="true" />
+      <Field Name="BoundingBox" Hidden="true" />
+      <Field Name="TimesBigger" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABgAQAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Engine\Basic2d.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.Camera">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Source\Engine\Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.Globals">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEEAAAAEAAABIgAAAAAAAAIAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Engine\Globals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.MyTimer">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABCAAAAAAAAgAAAAAAAACBAgAAAAAAAA=</HashCode>
+      <FileName>Source\Engine\MyTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.UI">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Engine\UI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.Asset">
+    <Position X="5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Source\GamePlay\World\Asset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.Character">
+    <Position X="1.5" Y="3.75" Width="2" />
+    <Members>
+      <Field Name="Alive" Hidden="true" />
+      <Field Name="AttackChange" Hidden="true" />
+      <Field Name="AttackImgs" Hidden="true" />
+      <Field Name="AttackInProgress" Hidden="true" />
+      <Field Name="AttackSpriteNum" Hidden="true" />
+      <Field Name="AttackStepsSinceChange" Hidden="true" />
+      <Field Name="DieChange" Hidden="true" />
+      <Field Name="DieImgs" Hidden="true" />
+      <Field Name="DieSpriteNum" Hidden="true" />
+      <Field Name="Health" Hidden="true" />
+      <Method Name="MoveDownOnce" Hidden="true" />
+      <Method Name="MoveLeftOnce" Hidden="true" />
+      <Method Name="MoveRightOnce" Hidden="true" />
+      <Method Name="MoveUpOnce" Hidden="true" />
+      <Field Name="RunChange" Hidden="true" />
+      <Field Name="RunImgs" Hidden="true" />
+      <Field Name="RunSpriteNum" Hidden="true" />
+      <Field Name="SpriteDirection" Hidden="true" />
+      <Field Name="StepsMovedSinceChange" Hidden="true" />
+      <Field Name="Strength" Hidden="true" />
+      <Field Name="TempModel" Hidden="true" />
+      <Field Name="velocity" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAUACCIAAACFEgAkAAAgAEAAAIBAAAwZ0SQAICAEAAA=</HashCode>
+      <FileName>Source\GamePlay\World\Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.Enemy">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <Members>
+      <Field Name="Direction" Hidden="true" />
+      <Field Name="MoveRange" Hidden="true" />
+      <Field Name="PixesMoved" Hidden="true" />
+      <Field Name="ReadyForFight" Hidden="true" />
+      <Field Name="Type" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQAAAoABIABEAAAACAAAQAAAAAAAAAAAQAAAAQAAAA=</HashCode>
+      <FileName>Source\GamePlay\World\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.Hero">
+    <Position X="2.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAACGACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\GamePlay\World\Hero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentSurvival.World">
+    <Position X="7.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAEgAAEAAAAAEAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\World.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

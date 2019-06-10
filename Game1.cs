@@ -19,7 +19,8 @@ namespace StudentSurvival
     {
         GraphicsDeviceManager graphics;
 
-        World world;
+        private World world;
+        private Camera camera;
         
         public Game1()
         {
@@ -57,6 +58,7 @@ namespace StudentSurvival
 
             Globals.OldState = Keyboard.GetState();
             world = new World();
+            camera = new Camera();
         }
 
         /// <summary>
@@ -82,8 +84,8 @@ namespace StudentSurvival
                 if (Globals.NewState.IsKeyDown(Keys.Escape)) Exit();
 
                 // TODO: Add your update logic here
-                //Globals.HeroHealTime.UpdateTimer(gameTime);
                 world.Update(gameTime);
+                camera.Follow(Globals.Hero);
 
                 base.Update(gameTime);
             }
@@ -99,7 +101,7 @@ namespace StudentSurvival
 
             // TODO: Add your drawing code here
 
-            Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
+            Globals.spriteBatch.Begin(transformMatrix: camera.Transform);
 
             world.Draw();
 

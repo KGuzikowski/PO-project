@@ -22,6 +22,7 @@ namespace StudentSurvival
         public static List<Basic2d> BackgroundElems;
         public static List<Asset> InteractiveAssets;
         public static List<Enemy> EnemiesAssets;
+        public static List<Basic2d> TopBar;
         public static Hero Hero;
     }
 }

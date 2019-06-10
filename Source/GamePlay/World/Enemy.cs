@@ -25,7 +25,7 @@ namespace StudentSurvival
 
         public int Type;
 
-        public Enemy(string path, int type, int X, int Y, float vel, int run, int attack, int TimesBigger, int range, int health, int strength)
+        public Enemy(string path, int type, int X, int Y, float vel, int run, int attack, float TimesBigger, int range, int health, int strength)
         : base(path, X, Y, vel, run, attack, TimesBigger, health, strength)
         {
             MoveRange = range;
@@ -37,6 +37,7 @@ namespace StudentSurvival
 
         public override void Update()
         {
+            if (!Alive) return;
             if (ReadyForFight)
             {
                 if (!HeroAllert(BoundingBox.Width))
@@ -54,6 +55,7 @@ namespace StudentSurvival
                 if (HeroAllert(BoundingBox.Width)) GetReady();
                 else Move();
             }
+            if (Health <= 0) AddPoints();
             base.Update();
         }
 
@@ -127,6 +129,25 @@ namespace StudentSurvival
                 return true;
             }
             else return false;
+        }
+
+        private void AddPoints()
+        {
+            switch (Type)
+            {
+                case 1:
+                    Globals.Hero.Points += 50;
+                    break;
+                case 2:
+                    Globals.Hero.Points += 100;
+                    break;
+                case 3:
+                    Globals.Hero.Points += 150;
+                    break;
+                case 4:
+                    Globals.Hero.Points += 200;
+                    break;
+            }
         }
     }
 }

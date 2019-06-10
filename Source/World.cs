@@ -86,8 +86,16 @@ namespace StudentSurvival
         {
             int y = Globals.spriteBatch.GraphicsDevice.Viewport.Height;
             for (int i = 0; i < 4; i++)
-                for (int j = 0; j < 7; j++)
-                    Globals.BackgroundElems.Add(new Basic2d("2D\\world\\land_6", j * 256, i * 256, 1));
+                for (int j = -6; j < 0; j++)
+                    Globals.BackgroundElems.Add(new Basic2d("2D\\world\\land_6", j * 256, i * 256, 1.00f));
+            
+            Globals.BackgroundElems.Add(new Basic2d("2D\\world\\grass", 0, 0, 6.00f));
+
+            Globals.BackgroundElems.Add(new Basic2d("2D\\world\\lake_vertical", -500, -100, 1.50f));
+            Globals.BackgroundElems.Add(new Basic2d("2D\\world\\Plants\\greenery_1", -600, y - 400, 1.00f));
+
+            for (int i = 0; i < 5; i++)
+                Globals.GameAssets.Add(new Basic2d("2D\\world\\Buildings\\building_1", -200, i * 210, 0.4f));
         }
 
         private void SetCharacters()
@@ -95,7 +103,7 @@ namespace StudentSurvival
             int HeroX, HeroY;
             HeroX = 200;
             HeroY = Globals.spriteBatch.GraphicsDevice.Viewport.Height - 200;
-            Globals.Hero = new Hero("2D\\adventurer-idle-00", HeroX, HeroY, 6.00f, 6, 5, 4, 100, 40);
+            Globals.Hero = new Hero("2D\\adventurer-idle-00", HeroX, HeroY, 6.00f, 6, 5, 4.00f, 100, 40);
 
             SetEnemies();
         }
@@ -107,7 +115,7 @@ namespace StudentSurvival
             int enemies = 0;
 
             Globals.EnemiesAssets.Add(new Enemy("2D\\Enemies\\Minotaur\\Minotaur", 1,
-                                               200, WindowY - 64, 2.00f, 6, 7, 3, 500, 70, 30));
+                                               200, WindowY, 2.00f, 6, 7, 3.00f, 500, 70, 30));
             enemies++;
 
             for (int i = 0; i < 8; i++)

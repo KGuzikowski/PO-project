@@ -16,8 +16,9 @@ namespace StudentSurvival
     {
         private MyTimer HealTime;
         private int MaxHealth;
+        public int Points;
 
-        public Hero(string path, int X, int Y, float vel, int run, int attack, int TimesBigger, int health, int strength)
+        public Hero(string path, int X, int Y, float vel, int run, int attack, float TimesBigger, int health, int strength)
         : base(path, X, Y, vel, run, attack, TimesBigger, health, strength)
         {
             for(int i = 0; i < 6; i++)
@@ -60,8 +61,8 @@ namespace StudentSurvival
                     RunSpriteNum = 0;
                     TempModel = BasicModel;
                     StepsMovedSinceChange = 0;
-                    BoundingBox.Width = TempModel.Width * TimesBigger;
-                    BoundingBox.Height = TempModel.Height * TimesBigger;
+                    BoundingBox.Width = (int)(TempModel.Width * TimesBigger);
+                    BoundingBox.Height = (int)(TempModel.Height * TimesBigger);
                 }
             }
             BoundingBox.X = MathHelper.Clamp(BoundingBox.X, 0, Globals.spriteBatch.GraphicsDevice.Viewport.Width - BoundingBox.Width);
