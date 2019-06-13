@@ -39,10 +39,10 @@ namespace StudentSurvival
 
         public bool Alive;
         public List<Texture2D> DieImgs;
-        private int DieChange;
-        private int DieSpriteNum;
+        protected int DieChange;
+        protected int DieSpriteNum;
 
-        public Character(string path, int X, int Y, float vel, int run, int attack, float TimesBigger, int health, int strength)
+        public Character(string path, int X, int Y, float vel, int run, int attack, int die, float TimesBigger, int health, int strength)
         : base(path, X, Y, TimesBigger)
         {
             Alive = true;
@@ -59,22 +59,22 @@ namespace StudentSurvival
             AttackStepsSinceChange = 0;
             RunChange = run;
             AttackChange = attack;
-            DieChange = 10;
+            DieChange = die;
             DieSpriteNum = 0;
             Health = health;
             Strength = strength;
         }
 
-        public new virtual void Update()
+        public virtual void Update()
         {
             if (!Alive) return;
             if (Health <= 0)
             {
+                Health = 0;
                 Die();
                 return;
             }
-
-            base.Update();
+            
             if (AttackInProgress)
             {
                 Attack();
@@ -140,7 +140,6 @@ namespace StudentSurvival
 
         protected virtual void Die()
         {
-            Alive = false;
             if (StepsMovedSinceChange % DieChange == 0)
             {
                 if (DieSpriteNum != DieImgs.Count)
@@ -149,8 +148,8 @@ namespace StudentSurvival
                     BoundingBox.Width = (int)(TempModel.Width * TimesBigger);
                     BoundingBox.Height = (int)(TempModel.Height * TimesBigger);
                     DieSpriteNum++;
-                    StepsMovedSinceChange = 0;
                 }
+                else Alive = false;
             }
             StepsMovedSinceChange++;
         }

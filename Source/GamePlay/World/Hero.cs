@@ -15,26 +15,38 @@ namespace StudentSurvival
     public class Hero : Character
     {
         private MyTimer HealTime;
-        private int MaxHealth;
+        public int MaxHealth;
         public int Points;
+        public bool Win;
 
-        public Hero(string path, int X, int Y, float vel, int run, int attack, float TimesBigger, int health, int strength)
-        : base(path, X, Y, vel, run, attack, TimesBigger, health, strength)
+        private int finish;
+
+        public int Finish { get => finish; set => finish = value; }
+
+        public Hero(string path, int X, int Y, float vel, int run, int attack, int die, float TimesBigger, int health, int strength)
+        : base(path, X, Y, vel, run, attack, die, TimesBigger, health, strength)
         {
             for(int i = 0; i < 6; i++)
             {
                 RunImgs.Add(Globals.content.Load<Texture2D>("2D\\HeroRun\\adventurer-run-0" + i));
                 AttackImgs.Add(Globals.content.Load<Texture2D>("2D\\HeroAttack\\adventurer-attack1-0" + i));
+                DieImgs.Add(Globals.content.Load<Texture2D>("2D\\HeroDie\\adventurer-die-0" + (i+1)));
             }
             HealTime = new MyTimer(4000, 4000);
             MaxHealth = health;
+            Win = false;
         }
 
         public void Update(GameTime gameTime)
         {
+            if (!Alive) return;
+            if (Health <= 0)
+            {
+                Health = 0;
+                Die();
+                return;
+            }
             base.Update();
-
-            Heal(gameTime);
 
             if (!AttackInProgress)
             {
@@ -64,19 +76,33 @@ namespace StudentSurvival
                     BoundingBox.Width = (int)(TempModel.Width * TimesBigger);
                     BoundingBox.Height = (int)(TempModel.Height * TimesBigger);
                 }
+
+                AssetsCollide(gameTime);
+                Heal(gameTime);
             }
-            BoundingBox.X = MathHelper.Clamp(BoundingBox.X, 0, Globals.spriteBatch.GraphicsDevice.Viewport.Width - BoundingBox.Width);
+            if (BoundingBox.X < 0) BoundingBox.X = 0;
+            if (BoundingBox.X > Finish)
+            {
+                Win = true;
+                Alive = false;
+            }
             BoundingBox.Y = MathHelper.Clamp(BoundingBox.Y, BoundingBox.Height, Globals.spriteBatch.GraphicsDevice.Viewport.Height);
         }
 
         private void Heal(GameTime gameTime)
         {
-            if(Health < MaxHealth && !AttackInProgress)
+            if(Health < MaxHealth)
                 if (HealTime.ItsTime())
-                {
                     Health += 10;
-                }
                 else HealTime.UpdateTimer(gameTime);
+        }
+
+        private void AssetsCollide(GameTime gameTime)
+        {
+            foreach (Asset asset in Globals.InteractiveAssets)
+            {
+                if (Collides(asset)) asset.Execute(gameTime);
+            }
         }
 
         protected override void HitEnemy()
@@ -88,7 +114,7 @@ namespace StudentSurvival
             }
         }
 
-        protected bool CollidesEnemy(Enemy enemy)
+        private bool CollidesEnemy(Enemy enemy)
         {
             Rectangle box = enemy.BoundingBox;
             if (BoundingBox.X < enemy.BoundingBox.X)

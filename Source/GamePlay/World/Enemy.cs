@@ -25,8 +25,8 @@ namespace StudentSurvival
 
         public int Type;
 
-        public Enemy(string path, int type, int X, int Y, float vel, int run, int attack, float TimesBigger, int range, int health, int strength)
-        : base(path, X, Y, vel, run, attack, TimesBigger, health, strength)
+        public Enemy(string path, int type, int X, int Y, float vel, int run, int attack, int die, float TimesBigger, int range, int health, int strength)
+        : base(path, X, Y, vel, run, attack, die, TimesBigger, health, strength)
         {
             MoveRange = range;
             PixesMoved = 0;
@@ -55,8 +55,28 @@ namespace StudentSurvival
                 if (HeroAllert(BoundingBox.Width)) GetReady();
                 else Move();
             }
-            if (Health <= 0) AddPoints();
             base.Update();
+        }
+
+        protected override void Die()
+        {
+            if (StepsMovedSinceChange % DieChange == 0)
+            {
+                if (DieSpriteNum != DieImgs.Count)
+                {
+                    TempModel = DieImgs[DieSpriteNum];
+                    BoundingBox.Width = (int)(TempModel.Width * TimesBigger);
+                    BoundingBox.Height = (int)(TempModel.Height * TimesBigger);
+                    DieSpriteNum++;
+                    StepsMovedSinceChange = 0;
+                }
+                else
+                {
+                    AddPoints();
+                    Alive = false;
+                }
+            }
+            StepsMovedSinceChange++;
         }
 
         protected override void HitEnemy()

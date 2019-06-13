@@ -16,28 +16,69 @@ namespace StudentSurvival
     {
         //Type = 1 : gives health
         //Type = 2 : takes health
-        private int Type;
+        public int Type;
 
         private int ActionStrength;
+        private bool Done;
+        private MyTimer FireTime;
+        private bool TimeToHurt;
+        private int TimeAgo;
 
-        Asset(string path, int X, int Y, int TimesBigger, int type, int actionStrength)
+        public Asset(string path, int X, int Y, float TimesBigger, int type, int actionStrength)
         : base(path, X, Y, TimesBigger)
         {
             Type = type;
             ActionStrength = actionStrength;
+            Done = false;
+            FireTime = new MyTimer(1000, 0);
+            TimeToHurt = true;
+            TimeAgo = 0;
         }
 
-        public void Execute()
+        public void Execute(GameTime gameTime)
         {
-            switch (Type)
+            if(Type == 1 && Done == false)
             {
-                case 1:
-                    Globals.Hero.Health += ActionStrength;
-                    break;
-                case 2:
-                    Globals.Hero.Health -= ActionStrength;
-                    break;
+                Heal();
             }
+            else if(Type == 2)
+            {
+                Hurt(gameTime);
+            }
+        }
+
+        private void Heal()
+        {
+            if (Globals.Hero.Health >= Globals.Hero.MaxHealth)
+                return;
+
+            Globals.Hero.Health += ActionStrength;
+            if (Globals.Hero.Health > Globals.Hero.MaxHealth)
+                Globals.Hero.Health = Globals.Hero.MaxHealth;
+
+            Done = true;
+            BasicModel = null;
+        }
+
+        private void Hurt(GameTime gameTime)
+        {
+            if (TimeAgo == 3)
+            {
+                TimeAgo = 0;
+                TimeToHurt = true;
+            }
+
+            if (TimeToHurt)
+            {
+                Globals.Hero.Health -= ActionStrength;
+                TimeToHurt = false;
+            }
+            else if (FireTime.ItsTime())
+            {
+                Globals.Hero.Health -= ActionStrength;
+                TimeAgo++;
+            }
+            else FireTime.UpdateTimer(gameTime);
         }
     }
 }

@@ -28,11 +28,6 @@ namespace StudentSurvival
             this.TimesBigger = TimesBigger;
         }
 
-        public virtual void Update()
-        {
-
-        }
-
         public virtual void Draw()
         {
             if (BasicModel != null)

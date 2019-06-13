@@ -55,9 +55,19 @@ namespace StudentSurvival
             Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-
+            GraphicsDevice.Clear(Color.CornflowerBlue);
             Globals.OldState = Keyboard.GetState();
-            world = new World();
+            world = new World(
+                WorldX: 3000,
+                EnemiesNumber: 9,
+                BuildingsNumber: 11,
+                ObstacklesNumber: 5,
+                FoodNumber: 8,
+                FireNumber: 5,
+                BgAssetsNumber: 10,
+                graphics: GraphicsDevice
+                );
+
             camera = new Camera();
         }
 
@@ -97,8 +107,6 @@ namespace StudentSurvival
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
             // TODO: Add your drawing code here
 
             Globals.spriteBatch.Begin(transformMatrix: camera.Transform);
@@ -106,7 +114,6 @@ namespace StudentSurvival
             world.Draw();
 
             Globals.spriteBatch.End();
-
             base.Draw(gameTime);
         }
     }

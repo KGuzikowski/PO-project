@@ -20,6 +20,7 @@ namespace StudentSurvival
         public static KeyboardState OldState;
         public static List<Basic2d> GameAssets;
         public static List<Basic2d> BackgroundElems;
+        public static List<Basic2d> BackgroundAssets;
         public static List<Asset> InteractiveAssets;
         public static List<Enemy> EnemiesAssets;
         public static List<Basic2d> TopBar;
