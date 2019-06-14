@@ -95,3 +95,5 @@ G:\studia\StudentSurvival\StudentSurvival\StudentSurvival\bin\DesktopGL\AnyCPU\D
 G:\studia\StudentSurvival\StudentSurvival\StudentSurvival\bin\DesktopGL\AnyCPU\Debug\Content\2D\HeroDie\adventurer-die-05.xnb
 G:\studia\StudentSurvival\StudentSurvival\StudentSurvival\bin\DesktopGL\AnyCPU\Debug\Content\2D\HeroDie\adventurer-die-06.xnb
 G:\studia\StudentSurvival\StudentSurvival\StudentSurvival\bin\DesktopGL\AnyCPU\Debug\Content\Fonts\GameOver.xnb
+G:\studia\StudentSurvival\StudentSurvival\StudentSurvival\bin\DesktopGL\AnyCPU\Debug\Content\Music\Strange Mind.ogg
+G:\studia\StudentSurvival\StudentSurvival\StudentSurvival\bin\DesktopGL\AnyCPU\Debug\Content\Music\Strange Mind.xnb

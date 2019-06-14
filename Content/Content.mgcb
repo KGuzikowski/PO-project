@@ -939,3 +939,9 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/GameOver.spritefont
 
+#begin Music/Strange Mind.MP3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Music/Strange Mind.MP3
+

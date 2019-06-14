@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/Music/Strange Mind.MP3</SourceFile>
+  <SourceTime>2019-06-14T12:44:44.1265882+02:00</SourceTime>
+  <DestFile>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/bin/DesktopGL/Music/Strange Mind.xnb</DestFile>
+  <DestTime>2019-06-14T12:48:41.0109827+02:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2018-12-08T17:35:54+01:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/bin/DesktopGL/Music/Strange Mind.ogg</string>
+  </BuildOutput>
+</PipelineBuildEvent>

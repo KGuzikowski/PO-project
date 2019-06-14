@@ -82,8 +82,10 @@
     <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/2D/World/Plants/greenery_1.png</File>
     <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/Fonts/Arial16.spritefont</File>
     <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/Fonts/GameOver.spritefont</File>
+    <File>G:/studia/StudentSurvival/StudentSurvival/StudentSurvival/Content/Music/Strange Mind.MP3</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

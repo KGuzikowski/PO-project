@@ -21,6 +21,7 @@ namespace StudentSurvival
 
         private World world;
         private Camera camera;
+        private Song BackgroundSong;
         
         public Game1()
         {
@@ -69,6 +70,9 @@ namespace StudentSurvival
                 );
 
             camera = new Camera();
+            BackgroundSong = Globals.content.Load<Song>("Music\\Strange Mind");
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Play(BackgroundSong);
         }
 
         /// <summary>
